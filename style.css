@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+}
+@font-face {
+  font-family: Abel;
+  src: url(Abel-Regular.ttf);
+}
+@font-face {
+  font-family: Oswald;
+  src: url(Oswald-Bold.ttf);
+}
+
+:root {
+  --clr-neon:rgb(0, 191, 255);
+  --clr-bg: hsl(323 21% 16%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#img9{
+  border-radius: 10px;
+}
+.neon-button {
+  font-size: 2rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon) ;
+  border: var(--clr-neon) 1px solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  margin-left: 8px;
+  height:auto;
+  
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.neon-button::before {
+
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  /* top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+
+}
+
+.neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+  border-radius: 0.25em;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
+}
+h2
+{
+  font-size: 25px;
+}
+
+.row1{
+    
+    width: 100%; 
+    float: left;
+} 
+#img{
+    float: right;
+}
+
+.h1{
+    color:black; 
+    font-size: bold; 
+    text-align: center;
+}
+/* a
+{
+    position: relative;
+    background: transparent;
+    color: #0b001c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    border: none;
+}
+a:hover
+{
+    background: transparent;
+    color: rgb(246, 117, 11);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px #0c0c0c;
+}
+a:before
+{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: transparent;
+} */
+.row2{ 
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding-left: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  font-family: Oswald;
+}
+.row2 ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 80px;
+}
+.row2 ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+.row2 ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #0b001c;
+    font-size: 1.5em;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.scroll{
+     
+    font-family: 'Oswald',sans-serif;
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(11, 4, 4),rgb(11, 11, 11));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    animation-name: rightToLeft;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.white-line
+{
+  margin-top: 170px;
+}
+.author1
+{
+  margin-left: 250px;
+}
+.main{
+        font-family: Oswald;
+        font-size: 40px;
+        background: -webkit-linear-gradient(#0c0c0c,rgb(9, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 0px;
+    
+}
+#about{ 
+    color: black;
+    font-size: 27px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+ 
+    margin-left: 50px;
+    margin-right: 50px;
+
+} 
+.row3 {
+
+    background-color:lightcoral;
+    text-align: center;
+
+}
+.h2{
+    color: rgb(255, 255, 255); 
+    text-align: center;
+}
+#row4{
+  width:100%; 
+  text-align: center; 
+  float: left ; 
+  padding: 2px;
+  color:white;
+}
+.imgsrc{
+    margin-left: 100px;
+    border-radius: 10px;
+    
+} 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #068df5;
+    color: white;
+  } 
+  .fa-instagram {
+    background: var(#fccc63,#fbad50,#cd486b,#e95950,#bc2a8d,#8a3ab9, #4c68d7,45deg);
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-linkedin{
+    background: #1f03f2;
+    color: white;
+  } 
+  #about1{ 
+    
+    color: black;
+    font-size: 27px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+  }  
+  .row4-col1{
+    float: left; 
+    width: 70%;
+    text-align: center;
+    padding: 2px;
+  } 
+  .row4-col2{
+    float: right; 
+    width: 30%;
+    text-align: center;
+    padding: 2px;
+  } 
+  #about3{  
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    justify-content: center;
+    margin-left: 50px;
+  
+    width: 60%;
+
+}
+#about3-2{ 
+  color: black;
+  justify-content: right;
+  margin-right: 50px; 
+  float: right;
+  width: 40%;
+
+}
+.last{
+
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding:0px;
+} 
+.para-1
+{
+  margin-top: 200px;
+}
+#buttonrow
+{
+  margin-top: 50px;
+}
+.para-2
+{
+  margin-top: 200px;
+}
+.para-3
+{
+  margin-top: 200px;
+}
